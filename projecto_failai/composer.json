@@ -1,22 +1,19 @@
 {
-    "name": "kcs/web",
-    "description": "Kaunas Coding School kurso darbas",
-    "type": "project",
-    "version": "0.0.2",
-    "authors": [
-        {
-            "name": "Tautvydas Dulskis",
-            "email": "tautvydas@dulskis.eu"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=8.0",
-        "ext-pdo": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "KCS\\": "src"
-        }
+  "name": "lbockus/praktika",
+  "description": "praktines uzduotys",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Lukas Bočkus"
     }
+  ],
+  "require": {
+    "monolog/monolog": "2.8.0",
+    "larapack/dd": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src\\"
+    }
+  }
 }

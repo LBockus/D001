@@ -1,21 +1,36 @@
 <?php
 
+use App\Controllers\AdminController;
+use App\Controllers\ContactsController;
+use App\Controllers\HomeController;
+use App\Controllers\PortfolioController;
+use App\Output;
+use App\FS;
+use App\Authenticator;
+use App\Router;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
 require_once __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . "/../vendor/larapack/dd/src/helper.php";
 
-use KCS\SakykLabas;
-use KCS\DbConnect as DB;
+$log = new Logger('Profile');
+$log->pushHandler(new StreamHandler('../logs/errors.log', Logger::WARNING));
 
-echo "<meta charset='utf-8'>";
-SakykLabas::vardas('Vardenis');
+$output = new Output();
 
-$host = 'db';
-$user = 'devuser';
-$password = 'devpass';
-$db = 'kcs_db';
+try {
+    session_start();
 
-DB::tikrintiPrisijungima($host, $user, $password, $db);
+    $router = new Router();
+    $router->addRoute('GET', '', [new HomeController(), 'index']);
+    $router->addRoute('GET', 'admin', [new AdminController(), 'index']);
+    $router->addRoute('GET', 'contact', [new ContactsController(), 'index']);
+    $router->addRoute('GET', 'portfolio', [new PortfolioController(), 'index']);
+    $router->run();
 
-if(!empty($_REQUEST)){
-    echo '<hr>Gauti užklausos duomenys:<br><br>';
-    var_dump($_REQUEST);
+} catch (Exception $e) {
+    $output->store('An error occurred, try again later.');
+    $log->error($e->getMessage());
 }
+$output->print();
