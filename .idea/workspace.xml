@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b78ab689-abe5-4178-84c8-1adfc90bc1a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/ExceptionHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Exceptions/UnauthenticatedException.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/logs/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Authenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Authenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/ContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/ContactsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/PortfolioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/FS.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/FS.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/HtmlRender.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/HtmlRender.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/symfony/var-dumper" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/symfony/var-dumper" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +45,16 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="55cc5f63-be2d-4b0f-80b8-68270f497b3e" name="localhost" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/projecto_failai" remote-root="/var/www/html" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
   <component name="ProjectId" id="2JAVttRTdDuUU45cjAkncA3En8x" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -66,22 +63,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.php.debug.servers",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lukas\Desktop\Code_Academy\D001\projecto_failai\src\html" />
@@ -118,7 +115,7 @@
       <workItem from="1672994665421" duration="4575000" />
       <workItem from="1673016956116" duration="74000" />
       <workItem from="1673017065991" duration="307000" />
-      <workItem from="1673247869353" duration="6778000" />
+      <workItem from="1673247869353" duration="9475000" />
     </task>
     <servers />
   </component>
@@ -138,5 +135,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/projecto_failai/public_html/index.php</url>
+          <line>26</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="index.php">
+        <watch expression="$_SERVER" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
