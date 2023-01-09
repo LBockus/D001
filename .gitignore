@@ -1,4 +1,4 @@
 db/
-projecto_failai/vendor
+/vendor/
 .idea
 README.md
