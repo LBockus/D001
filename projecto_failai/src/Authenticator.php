@@ -2,29 +2,61 @@
 
 namespace App;
 
-use Exception;
+use App\Exceptions\UnauthenticatedException;
 
 class Authenticator
 {
     /**
-     * @throws Exception
+     * @throws UnauthenticatedException
      */
-    public function authenticate(string|null $userName, string|null $password) : bool
+    public function authenticate(): void
     {
-        if(!empty($userName) && !empty($password) && !$this->login($userName, $password))
-        {
-            throw new Exception();
+        if ($this->isLoggedIn()) {
+            return;
         }
-        return ($this->isLoggedIn() || !empty($userName) && !empty($password) && $this->login($userName, $password));
     }
 
+    /**
+     * @return bool
+     */
     public function isLoggedIn(): bool
     {
         return isset($_SESSION['logged']) && $_SESSION['logged'] === true;
     }
 
-    public function login(string $userName, string $password): bool
+    /**
+     * @param string $checkUser
+     * @param string $checkPass
+     * @return bool
+     * @throws UnauthenticatedException
+     */
+    public function login(string $checkUser, string $checkPass): bool
     {
-        return ($userName === 'admin' && $password === 'admin');
+        $loginsMas = [
+            'admin' => 'admin',
+            'tautiz' => 'pass',
+        ];
+
+        foreach ($loginsMas as $username => $pass) {
+            if ($checkUser === $username && $checkPass === $pass) {
+                $_SESSION['logged'] = true;
+                $_SESSION['username'] = $checkUser ?? $_SESSION['username'];
+                return true;
+            }
+        }
+
+        throw new UnauthenticatedException();
+    }
+
+    public function logout(): void
+    {
+        // Vieta kur atjungiam lakytoja ir sunaikinam jo sesija
+        if ($_GET['logout'] ?? false) {
+            $_SESSION['logged'] = false;
+            $_SESSION['username'] = null;
+            session_destroy();
+            header('Location: /');
+            exit();
+        }
     }
 }

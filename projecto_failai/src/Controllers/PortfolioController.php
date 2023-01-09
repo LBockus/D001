@@ -8,8 +8,11 @@ class PortfolioController
 {
     public function index()
     {
-        $fileSystem = new FS('../src/html/portfolio.html');
-        $fileContent = $fileSystem->getFileContent();
-        return $fileContent;
+        {
+            // Nuskaitomas HTML failas ir siunciam jo teksta i Output klase
+            $failoSistema = new FS('../src/html/portfolio.html');
+            $failoTurinys = $failoSistema->getFailoTurinys();
+            return $failoTurinys;
+        }
     }
 }

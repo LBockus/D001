@@ -4,15 +4,15 @@ namespace App;
 
 class FS
 {
-    private string $fileContent;
+    private string $failoTurinys;
 
     public function __construct(private string $fileName)
     {
-        $this->fileContent = file_get_contents($this->fileName);
+        $this->failoTurinys = file_get_contents($this->fileName);
     }
 
-    public function getFileContent(): string
+    public function getFailoTurinys(): string
     {
-        return $this->fileContent;
+        return $this->failoTurinys;
     }
 }

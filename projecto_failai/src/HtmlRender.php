@@ -1,15 +1,15 @@
 <?php
 
 namespace App;
-
 use App\Exceptions\MissingVariableException;
+use App\FS;
 
 class HtmlRender extends AbstractRender
 {
     protected function getContent(): string
     {
-        $fileSystem = new FS('../src/html/Dashboard.html');
-        $fileContent = $fileSystem->getFileContent();
+        $failoSistema = new FS('../src/html/Dashboard.html');
+        $failoTurinys = $failoSistema->getFailoTurinys();
 
         $duomMas = [
             'username' => $_SESSION['username'],
@@ -19,12 +19,12 @@ class HtmlRender extends AbstractRender
         ];
 
         foreach ($duomMas as $key => $value) {
-            if (!str_contains($fileContent, '{{' . $key . '}}')) {
+            if (!str_contains($failoTurinys, '{{' . $key . '}}')) {
                 throw new MissingVariableException('Nerastas raktazodis: ' . $key);
             }
-            $fileContent = str_replace('{{' . $key . '}}', $value, $fileContent);
+            $failoTurinys = str_replace('{{' . $key . '}}', $value, $failoTurinys);
         }
 
-        return $fileContent;
+        return $failoTurinys;
     }
 }
