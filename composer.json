@@ -8,5 +8,8 @@
             "name": "Tautvydas Dulskis",
             "email": "tautvydas@dulskis.eu"
         }
-    ]
+    ],
+  "require": {
+    "ext-pdo": "*"
+  }
 }
