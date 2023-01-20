@@ -6,21 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b78ab689-abe5-4178-84c8-1adfc90bc1a1" name="Changes" comment="fixing missing logger">
       <changelist_data name="LBockus" email="bockus.lukas@gmail.com" date="1673017125000" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Configs.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Exceptions/ValidatorException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Validator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql_failai/join_tasks.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql_failai/pradmenys.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql_failai/view_tasks.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/persons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/update_person.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/logs/errors.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/PortfolioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/ExceptionHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/ExceptionHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/PersonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Validator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/new_person.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/symfony/var-dumper" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/symfony/var-dumper" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +146,8 @@
       <workItem from="1673940889955" duration="4927000" />
       <workItem from="1673961241270" duration="5185000" />
       <workItem from="1674025490815" duration="6759000" />
-      <workItem from="1674111792764" duration="4466000" />
+      <workItem from="1674111792764" duration="6936000" />
+      <workItem from="1674198331010" duration="6189000" />
     </task>
     <task id="LOCAL-00001" summary="updated to latest project files and added depencancy injector task">
       <created>1673269341135</created>

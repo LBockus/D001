@@ -3,7 +3,7 @@
 use App\Controllers\AdminController;
 use App\Controllers\ContactsController;
 use App\Controllers\HomeController;
-use App\Controllers\PortfolioController;
+use App\Controllers\PersonController;
 use App\ExceptionHandler;
 use App\Output;
 use App\FS;
@@ -25,14 +25,20 @@ try {
 
     $authenticator = new Authenticator();
     $adminController = new AdminController($authenticator);
+    $personController = new PersonController();
 
     $router = new Router();
     $router->addRoute('GET', '', [new HomeController(), 'index']);
     $router->addRoute('GET', 'admin', [$adminController, 'index']);
     $router->addRoute('POST', 'login', [$adminController, 'login']);
     $router->addRoute('GET', 'contacts', [new ContactsController($log), 'index']);
-    $router->addRoute('GET', 'portfolio', [new PortfolioController(), 'index']);
-    $router->addRoute('POST', 'portfolio', [new PortfolioController(), 'store']);
+    $router->addRoute('GET', 'persons', [$personController, 'index']);
+    $router->addRoute('GET', 'person/new', [$personController, 'new']);
+    $router->addRoute('GET', 'person/delete', [$personController, 'delete']);
+    $router->addRoute('POST', 'persons', [$personController, 'store']);
+    $router->addRoute('GET', 'person/edit', [$personController, 'edit']);
+    $router->addRoute('GET', 'person/update', [$personController, 'update']);
+    $router->addRoute('POST', 'person/update', [$personController, 'update']);
     $router->addRoute('GET', 'logout', [$adminController, 'logout']);
     $router->run();
 }

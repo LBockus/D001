@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redagavimas</title>
+</head>
+<body>
+<form action="/person/update" method="post">
+    <input type="hidden" name="id" placeholder="Id" value="{{id}}">
+    <input type="text" name="vardas" placeholder="Name" value="{{name}}">
+    <input type="text" name="pavarde" placeholder="Surname" value="{{surname}}">
+    <input type="text" name="email" placeholder="Email" value="{{email}}">
+    <input type="text" name="kodas" placeholder="Kodas" value="{{code}}">
+    <input type="text" name="telefonas" placeholder="Telefono numeris" value="{{phone}}">
+    <input type="text" name="address_id" placeholder="Address ID" value="{{address}}">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
