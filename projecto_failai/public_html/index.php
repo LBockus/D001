@@ -37,7 +37,6 @@ try {
     $router->addRoute('GET', 'person/delete', [$personController, 'delete']);
     $router->addRoute('POST', 'persons', [$personController, 'store']);
     $router->addRoute('GET', 'person/edit', [$personController, 'edit']);
-    $router->addRoute('GET', 'person/update', [$personController, 'update']);
     $router->addRoute('POST', 'person/update', [$personController, 'update']);
     $router->addRoute('GET', 'logout', [$adminController, 'logout']);
     $router->run();

@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b78ab689-abe5-4178-84c8-1adfc90bc1a1" name="Changes" comment="fixing missing logger">
       <changelist_data name="LBockus" email="bockus.lukas@gmail.com" date="1673017125000" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/persons.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/update_person.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/logs/errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/css/crud.css" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/css/crud.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/PortfolioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/PersonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Validator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/new_person.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/PersonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/PersonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/update_person.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/update_person.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/symfony/var-dumper" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/symfony/var-dumper" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -73,28 +72,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "service.view.auto.scroll.to.source": "true",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lukas\Desktop\Code_Academy\D001\projecto_failai\src\html" />
@@ -147,7 +147,7 @@
       <workItem from="1673961241270" duration="5185000" />
       <workItem from="1674025490815" duration="6759000" />
       <workItem from="1674111792764" duration="6936000" />
-      <workItem from="1674198331010" duration="6189000" />
+      <workItem from="1674198331010" duration="11945000" />
     </task>
     <task id="LOCAL-00001" summary="updated to latest project files and added depencancy injector task">
       <created>1673269341135</created>

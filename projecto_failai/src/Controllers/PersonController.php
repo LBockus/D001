@@ -89,21 +89,12 @@ class PersonController
             ]
         );
 
-        return "New record created successfully";
+        return $this->index();
     }
 
     public function delete()
     {
         $kuris = (int)$_GET['id'] ?? null;
-        $vardas = $_POST['vardas'] ?? '';
-        $pavarde = $_POST['pavarde'] ?? '';
-        $kodas = (int)$_POST['kodas'] ?? '';
-
-        Validator::required($vardas);
-        Validator::required($pavarde);
-        Validator::required($kodas);
-        Validator::numeric($kodas);
-        Validator::asmensKodas($kodas);
 
         Validator::required($kuris);
         Validator::numeric($kuris);
@@ -114,7 +105,7 @@ class PersonController
 
         $db->query("DELETE FROM `persons` WHERE `id` = :id", ['id' => $kuris]);
 
-        return "Record deleted successfully";
+        return $this->index();
     }
 
     public function edit()
