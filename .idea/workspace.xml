@@ -6,45 +6,44 @@
   <component name="ChangeListManager">
     <list default="true" id="b78ab689-abe5-4178-84c8-1adfc90bc1a1" name="Changes" comment="fixing missing logger">
       <changelist_data name="LBockus" email="bockus.lukas@gmail.com" date="1673017125000" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/Gw2Setup-64.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/BaseController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Managers/PersonsManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Request.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/layout/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/filter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/person_row.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/show.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/DB_uzdaviniai/joinai.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/public_html/favicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/public_html/js/mano.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/KontaktaiController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/PradziaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Managers/BaseManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/admin/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/kontaktai.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/layout/pagination/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/layout/pagination/page_link.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/pradzia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/Gw2Setup-64.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/logs/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/css/crud.css" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/AbstractRender.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/AbstractRender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Authenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Authenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/ContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/ContactsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/BaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/ContactsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/HomeController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/PersonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/PersonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/ExceptionHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/ExceptionHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Exceptions/PageNotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Exceptions/PageNotFoundException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Exceptions/UnauthenticatedException.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Exceptions/UnauthenticatedException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Exceptions/ValidatorException.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Exceptions/ValidatorException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/FS.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/FS.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/src/HtmlRender.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/HtmlRender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Managers/PersonsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Managers/PersonsManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Response.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/src/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/new_person.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/persons.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/update_person.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/installed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/platform_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/layout/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/layout/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/person/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/person/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/person/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/symfony/var-dumper" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/symfony/var-dumper" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +186,7 @@
       <workItem from="1674655014662" duration="1276000" />
       <workItem from="1674656355065" duration="1365000" />
       <workItem from="1674716685603" duration="20095000" />
-      <workItem from="1674803342347" duration="949000" />
+      <workItem from="1674803342347" duration="3355000" />
     </task>
     <task id="LOCAL-00001" summary="updated to latest project files and added depencancy injector task">
       <created>1673269341135</created>

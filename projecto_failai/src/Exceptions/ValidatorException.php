@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
-class ValidatorException extends \Exception
+use Exception;
+
+class ValidatorException extends Exception
 {
     public function __construct($message = "Netinkami duomenys.", $code = 400)
     {

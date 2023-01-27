@@ -4,6 +4,7 @@ namespace App;
 
 use App\Exceptions\PageNotFoundException;
 use App\Request;
+use Exception;
 
 class Router
 {
@@ -11,7 +12,7 @@ class Router
      * @param Output $output
      * @param array $routes
      */
-    public function __construct(protected Output $output, private array $routes = [])
+    public function __construct(protected Output $output, protected HtmlRender $render, protected array $routes = [])
     {
     }
 
@@ -48,14 +49,15 @@ class Router
         $url = explode('?', $url)[0];
         $url = rtrim($url, '/');
         $url = ltrim($url, '/');
+
         // Tikriname ar yra toks URL adresas ir metodas sukurtas mūsų $this->routes masyve
         if (isset($this->routes[$method][$url])) {
             // Iš $this->routes masyvo paimame controller klasės pavadinimą ir metodą
             $controllerData = $this->routes[$method][$url];
             $controller = $controllerData[0];
             $action = $controllerData[1];
-            // Iškviečiamas kontrolierio ($controller) objektas ir kviečiamas jo metodas ($action)
 
+            // Iškviečiamas kontrolierio ($controller) objektas ir kviečiamas jo metodas ($action)
             $request = new Request();
             $response = $controller->$action($request);
 
@@ -66,12 +68,17 @@ class Router
             }
 
             if (!$response instanceof Response) {
-                throw new \Exception("Controllerio $controller metodas '$action' turi grąžinti Response objektą");
+                throw new Exception("Controllerio $controller metodas '$action' turi grąžinti Response objektą");
             }
 
             // Iškviečiamas Render klasės objektas ir jo metodas setContent()
-            $render = new HtmlRender($this->output);
-            $render->setContent($response->content);
+            $this->render->setContent(
+                [
+                    'content' => $response->content,
+                    'title' => $response->params['title'] ?? 'Mano svetaine',
+                    'message' => $request->get('message')
+                ]
+            );
 
             // Spausdinam viska kas buvo 'Storinta' Output klaseje
             $this->output->print();

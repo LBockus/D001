@@ -2,162 +2,90 @@
 
 namespace App\Controllers;
 
-use App\Database;
 use App\HtmlRender;
 use App\Managers\PersonsManager;
+use App\Request;
 use App\Response;
 use App\Validator;
-use App\FS;
-use mysql_xdevapi\Exception;
-use PDO;
-use PDOException;
-use App\Configs;
-use App\Request;
-
 
 class PersonController extends BaseController
 {
     public const TITLE = 'Asmenys';
 
-    public function __construct(protected PersonsManager $manager)
+    public function __construct(protected PersonsManager $manager, Response $response, HtmlRender $htmlRender)
     {
-        parent::__construct();
+        parent::__construct($htmlRender, $response);
     }
 
     public function list(Request $request): Response
     {
+        $persons = $this->manager->getFiltered($request);
+        $total = $this->manager->getTotal();
+        $rez = $this->generatePersonsTable($persons);
 
-// TODO: Perkelti Filtravima
-//
-//        $kiekis = $request->get('amount', 10);
-//        $orderBy = $request->get('orderby', 'id');
-//
-//        $searchQuery = '';
-//        $params = [];
-//        $search = $request->get('search');
-//        if ($search) {
-//            $searchQuery = "WHERE first_name LIKE :search OR last_name LIKE :search OR code LIKE :search";
-//            $params['search'] = '%' . $search . '%';
-//        }
-
-        $asmenys = $this->manager->getAll();
-
-        $rez = $this->generatePersonsTable($asmenys);
-
-        $failoSistema = new FS('../src/html/person/list.html');
-        $failoTurinys = $failoSistema->getFailoTurinys();
-        $failoTurinys = str_replace("{{body}}", $rez ?? '', $failoTurinys);
-
-        return $this->response($failoTurinys);
+        return $this->render(
+            'person/list',
+            ['content' => $rez, 'pagination' => $this->generatePagination($total, $request), 'title' => self::TITLE],
+            ['title' => self::TITLE]
+        );
     }
 
     public function new(): Response
     {
-//      Nuskaitomas HTML failas ir siunciam jo teksta i Output klase
-        $failoSistema = new FS('../src/html/person/new.html');
-        $failoTurinys = $failoSistema->getFailoTurinys();
-        return $this->response($failoTurinys);
+        return $this->render('person/new');
     }
 
     public function store(Request $request): Response
     {
-        Validator::required($request->get('vardas'));
-        Validator::required($request->get('pavarde'));
-        Validator::required((int)$request->get('kodas'));
-        Validator::numeric((int)$request->get('kodas'));
-        Validator::asmensKodas((int)$request->get('kodas'));
+        Validator::required($request->get('first_name'));
+        Validator::required($request->get('last_name'));
+        Validator::required((int)$request->get('code'));
+        Validator::numeric((int)$request->get('code'));
+        Validator::asmensKodas((int)$request->get('code'));
 
-        $this->manager->storeOne($request);
+        $this->manager->store($request->all());
 
-        return $this->redirect('/persons', "New record created successfully");
+        return $this->redirect('/persons', ['message' => "Record created successfully"]);
     }
 
     public function delete(Request $request): Response
     {
-        $kuris = $request->get('id');
-        Validator::required($kuris);
-        Validator::numeric($kuris);
-        Validator::min($kuris, 1);
+        $id = (int)$request->get('id');
 
-        $this->manager->deleteOne($kuris);
+        Validator::required($id);
+        Validator::numeric($id);
+        Validator::min($id, 1);
 
-        return $this->redirect('/persons', "Record deleted successfully");
+        $this->manager->delete($id);
+
+        return $this->redirect('/persons', ['message' => "Record deleted successfully"]);
     }
 
     public function edit(Request $request): Response
     {
-        $failoSistema = new FS('../src/html/person/edit.html');
-        $failoTurinys = $failoSistema->getFailoTurinys();
-
         $person = $this->manager->getOne((int)$request->get('id'));
 
-        foreach ($person as $key => $item) {
-            $failoTurinys = str_replace("{{" . $key . "}}", $item ?? '', $failoTurinys);
-        }
-
-        return $this->response($failoTurinys);
+        return $this->render('person/edit', $person);
     }
 
     public function update(Request $request): Response
     {
-        Validator::required($request->get('vardas'));
-        Validator::required($request->get('pavarde'));
-        Validator::required($request->get('kodas'));
-        Validator::numeric($request->get('kodas'));
-        Validator::asmensKodas($request->get('kodas'));
+        Validator::required($request->get('first_name'));
+        Validator::required($request->get('last_name'));
+        Validator::required($request->get('code'));
+        Validator::numeric($request->get('code'));
+        Validator::asmensKodas($request->get('code'));
 
-        $this->manager->edit($request);
+        $this->manager->update($request->all());
 
         return $this->redirect('/person/show?id=' . $request->get('id'), ['message' => "Record updated successfully"]);
     }
 
     public function show(Request $request): Response
     {
-        $failoSistema = new FS('../src/html/person/show.html');
-        $failoTurinys = $failoSistema->getFailoTurinys();
+        $person = $this->manager->getOne((int)$request->get('id'));
 
-        $person = $this->manager->getOne($request->get('id'));
-
-        foreach ($person as $key => $item) {
-            $failoTurinys = str_replace("{{" . $key . "}}", $item ?? '', $failoTurinys);
-        }
-
-        return $this->response($failoTurinys);
-    }
-
-    public function filter(): Response
-    {
-        $failoSistema = new FS('../src/html/person/filter.html');
-        $failoTurinys = $failoSistema->getFailoTurinys();
-        return $this->response($failoTurinys);
-    }
-
-    public function filteredList(Request $request): Response
-    {
-        $asmenys = $this->manager->filter($request);
-
-        $rez = $this->generatePersonsTable($asmenys);
-
-        $failoSistema = new FS('../src/html/person/list.html');
-        $failoTurinys = $failoSistema->getFailoTurinys();
-        $failoTurinys = str_replace("{{body}}", $rez ?? '', $failoTurinys);
-
-        return $this->response($failoTurinys);
-    }
-
-    /**
-     * @param mixed $asmuo
-     * @return string
-     */
-    protected function generatePersonRow(array $asmuo): string
-    {
-        $failoSistema = new FS('../src/html/person/person_row.html');
-        $failoTurinys = $failoSistema->getFailoTurinys();
-        foreach ($asmuo as $key => $item) {
-            $failoTurinys = str_replace("{{" . $key . "}}", $item ?? '', $failoTurinys);
-        }
-
-        return $failoTurinys;
+        return $this->render('person/show', $person);
     }
 
     /**
@@ -178,7 +106,7 @@ class PersonController extends BaseController
                 <th>Veiksmai</th>
             </tr>';
         foreach ($asmenys as $asmuo) {
-            $rez .= $this->generatePersonRow($asmuo);
+            $rez .= $this->htmlRender->renderTemplate('person/person_row', $asmuo);
         }
         $rez .= '</table>';
         return $rez;

@@ -1,23 +1,22 @@
 <?php
 
+use App\Authenticator;
 use App\Controllers\AdminController;
-use App\Controllers\ContactsController;
-use App\Controllers\HomeController;
+use App\Controllers\KontaktaiController;
 use App\Controllers\PersonController;
+use App\Controllers\PradziaController;
 use App\ExceptionHandler;
 use App\Output;
-use App\FS;
-use App\Authenticator;
 use App\Router;
 use DI\ContainerBuilder;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . "/../vendor/larapack/dd/src/helper.php";
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../vendor/larapack/dd/src/helper.php';
 
-$log = new Logger('Profile');
-$log->pushHandler(new StreamHandler('../logs/errors.log', Logger::WARNING));
+$log = new Logger('Portfolios');
+$log->pushHandler(new StreamHandler('../logs/klaidos.log', Logger::INFO));
 
 $output = new Output();
 
@@ -28,14 +27,15 @@ try {
     $container = $containerBuilder->build();
 
     $adminController = $container->get(AdminController::class);
-//    $kontaktaiController = $container->get(ContactsController::class);
+    $kontaktaiController = $container->get(KontaktaiController::class);
     $personController = $container->get(PersonController::class);
 
     $router = $container->get(Router::class);
-    $router->addRoute('GET', '', [new HomeController(), 'index']);
+    $router->addRoute('GET', '', [$container->get(PradziaController::class), 'index']);
     $router->addRoute('GET', 'admin', [$adminController, 'index']);
     $router->addRoute('POST', 'login', [$adminController, 'login']);
-//    $router->addRoute('GET', 'contacts', [$kontaktaiController, 'index']);
+    $router->addRoute('GET', 'logout', [$adminController, 'logout']);
+    $router->addRoute('GET', 'kontaktai', [$kontaktaiController, 'index']);
     $router->addRoute('GET', 'persons', [$personController, 'list']);
     $router->addRoute('GET', 'person/new', [$personController, 'new']);
     $router->addRoute('GET', 'person/delete', [$personController, 'delete']);
@@ -43,12 +43,10 @@ try {
     $router->addRoute('GET', 'person/show', [$personController, 'show']);
     $router->addRoute('POST', 'person', [$personController, 'store']);
     $router->addRoute('POST', 'person/update', [$personController, 'update']);
-    $router->addRoute('GET', 'logout', [$adminController, 'logout']);
-    $router->addRoute('GET', 'person/filter', [$personController, 'filter']);
-    $router->addRoute('POST', 'person/filteredList',[$personController, 'filteredList']);
     $router->run();
 }
 catch (Exception $e) {
     $handler = new ExceptionHandler($output, $log);
     $handler->handle($e);
+    $output->print();
 }
