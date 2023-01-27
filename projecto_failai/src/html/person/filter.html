@@ -1,0 +1,16 @@
+<h4>Filtruoti duomenis.</h4>
+<form action="/person/filteredList" method="post">
+  <label for="filter">Pasirinkita pagal ka filtruoti: </label>
+  <select class="form-select" name="filter_key" id="filter_key" style="display: inline-block">
+    <option value="first_name">Varda</option>
+    <option value="last_name">Pavarde</option>
+    <option value="email">Email</option>
+    <option value="code">Asmens koda</option>
+    <option value="phone">Telefono numeri</option>
+    <option value="address_id">Adreso ID</option>
+    <option value="id">Id</option>
+  </select>
+  <input type="text" name="filter" id="filter">
+  <input type="submit" value="Submit">
+</form>
+</form>

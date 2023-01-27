@@ -6,12 +6,45 @@
   <component name="ChangeListManager">
     <list default="true" id="b78ab689-abe5-4178-84c8-1adfc90bc1a1" name="Changes" comment="fixing missing logger">
       <changelist_data name="LBockus" email="bockus.lukas@gmail.com" date="1673017125000" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/Gw2Setup-64.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/BaseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Managers/PersonsManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/layout/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/filter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/person_row.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/logs/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/css/crud.css" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/css/crud.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/css/crud.css" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/public_html/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/AbstractRender.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/AbstractRender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/ContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/ContactsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/src/Controllers/PersonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Controllers/PersonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/update_person.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/update_person.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/HtmlRender.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/HtmlRender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/new_person.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/persons.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/src/html/update_person.html" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/src/html/person/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/composer/platform_check.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projecto_failai/vendor/symfony/var-dumper" beforeDir="false" afterPath="$PROJECT_DIR$/projecto_failai/vendor/symfony/var-dumper" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +64,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -72,36 +105,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "service.view.auto.scroll.to.source": "true",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lukas\Desktop\Code_Academy\D001\projecto_failai\src\html\person" />
       <recent name="C:\Users\Lukas\Desktop\Code_Academy\D001\projecto_failai\src\html" />
       <recent name="C:\Users\Lukas\Desktop\Code_Academy\D001\projecto_failai\public_html\uzduotys\squareRoot" />
       <recent name="C:\Users\Lukas\Desktop\Code_Academy\D001\projecto_failai\public_html\squareRoot" />
       <recent name="C:\Users\Lukas\Desktop\Code_Academy\D001\projecto_failai\public_html\uzduotys" />
-      <recent name="C:\Users\Lukas\Desktop\Code_Academy\D001\projecto_failai\public_html\uzduotys\darbasSuJson" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -147,7 +180,14 @@
       <workItem from="1673961241270" duration="5185000" />
       <workItem from="1674025490815" duration="6759000" />
       <workItem from="1674111792764" duration="6936000" />
-      <workItem from="1674198331010" duration="11945000" />
+      <workItem from="1674198331010" duration="12134000" />
+      <workItem from="1674457613147" duration="689000" />
+      <workItem from="1674461906682" duration="11895000" />
+      <workItem from="1674562653713" duration="12000" />
+      <workItem from="1674655014662" duration="1276000" />
+      <workItem from="1674656355065" duration="1365000" />
+      <workItem from="1674716685603" duration="20095000" />
+      <workItem from="1674803342347" duration="949000" />
     </task>
     <task id="LOCAL-00001" summary="updated to latest project files and added depencancy injector task">
       <created>1673269341135</created>
